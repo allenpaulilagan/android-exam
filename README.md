@@ -25,7 +25,7 @@ To assess a developer's skills in terms of developing Android apps and decision-
         - Contact person
         - Contact person's phone number
     - Uses Clean Architecture
-    - Uses Modularization 
+    - Uses Modularization  
 
 - Exam Strategy
     - Start with a Basic Skeleton
