@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.ui.MainActivity">
+
+    <TextView
+        android:id="@+id/text_view_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="List of Names"
+        android:gravity="center"
+        android:layout_centerVertical="true"
+        android:layout_alignParentTop="true"
+        android:padding="24dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        />
+
+    <TextView
+        android:id="@+id/text_view_message_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Click the name to view full details."
+        android:gravity="center"
+        android:layout_centerVertical="true"
+        android:paddingBottom="24dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_below="@id/text_view_message"
+        />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/text_view_message_2">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_person" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</RelativeLayout>
